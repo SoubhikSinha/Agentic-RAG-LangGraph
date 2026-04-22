@@ -1,0 +1,11 @@
+langgraph
+langchain
+langchain_community
+langchainhub
+ipykernel
+langchain_groq
+langchain_huggingface
+sentence-transformers
+bs4
+tiktoken
+chromadb
