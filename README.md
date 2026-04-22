@@ -1,1 +1,10 @@
-# Agentic-RAG-LangGraph
+# Agentic RAG @ `LangGraph`
+
+**Agentic-RAG-LangGraph** is a hands-on implementation of **Agentic Retrieval-Augmented Generation (RAG)** using the _LangGraph framework_, combining **LLM-driven decision making** with structured graph-based workflows for intelligent document retrieval, query rewriting, and response generation. The repository demonstrates how to build a stateful agent pipeline where an LLM dynamically decides whether to retrieve external knowledge, evaluate relevance, refine queries, and generate grounded answers. The core workflow is implemented in a Jupyter notebook, where `AgentState` maintains conversational context using `TypedDict` and `Annotated` message passing, while nodes such as `ai_assistant`, `retriever`, `grade_documents`, `rewriter`, and `generator` are orchestrated through LangGraph’s conditional edges and execution engine. The system integrates **Groq-powered LLMs** (e.g., `llama-3.3-70b-versatile`) via `ChatGroq`, along with LangChain utilities like `create_retriever_tool` for semantic search over embedded documents. Tool-based reasoning is enabled through `llm.bind_tools(tools)`, allowing the agent to autonomously invoke retrieval when needed, while a grading mechanism ensures only relevant documents are used for generation. The project showcases advanced agentic patterns such as **self-reflection**, **dynamic control flow**, and **context-aware query rewriting**, forming a robust foundation for production-grade RAG systems. Dependencies are managed via requirements.txt, with environment variables (`GROQ_API_KEY`, etc.) configured through dotenv. Users can run the notebook end-to-end, inspect intermediate graph states, and extend the architecture toward scalable systems using vector databases like **FAISS**, **ChromaDB**, or **Pinecone**, as well as multi-agent orchestration and evaluation pipelines.
+<br>
+<br>
+
+## References
+[Krish Naik](https://github.com/krishnaik06)<br>
+[LangGraph Documentation](https://github.com/langchain-ai/langgraph)<br>
+[LangChain](https://github.com/langchain-ai/langchain)
